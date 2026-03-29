@@ -50,7 +50,7 @@ tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["📋 12-Step Isolation Process", 
 
 with tab1:
     st.subheader("The 12-Step Isolation Process")
-    st.image(Image.open("/Users/lozhemmings/Downloads/12step_flowchart.png"), 
+    st.image(Image.open("12step_flowchart.png"), 
              caption="12-Step Isolation Process Flowchart – Aligned with industry standards", 
              use_container_width=True)
 
@@ -151,17 +151,17 @@ with tab2:
     st.subheader("Electrical Drawing Library")
     equip = st.radio("Select Equipment", ["Underground Switchgear Isolation Point", "Conveyor Drive Motor Isolation Point"])
     if equip == "Underground Switchgear Isolation Point":
-        st.image(Image.open("/Users/lozhemmings/Downloads/underground_switchgear.png"), 
-                 caption="Underground switchgear with visible isolation points (Ampcontrol/NEPEAN style).", 
+        st.image(Image.open("underground_switchgear.png"), 
+                 caption="Underground switchgear with visible isolation points.", 
                  use_container_width=True)
     else:
-        st.image(Image.open("/Users/lozhemmings/Downloads/conveyor_motor_isolator.png"), 
-                 caption="Conveyor drive motor isolation point with personal lock applied (SS94 style).", 
+        st.image(Image.open("conveyor_motor_isolator.png"), 
+                 caption="Conveyor drive motor isolation point with personal lock applied.", 
                  use_container_width=True)
 
 with tab3:
     st.subheader("Hybrid Group Isolation Lock Box")
-    st.image(Image.open("/Users/lozhemmings/Downloads/group_lock_box.png"), 
+    st.image(Image.open("group_lock_box.png"), 
              caption="Group lock box with multiple personal locks and permit tag applied.", 
              use_container_width=True)
     lock_id = st.text_input("Simulate Scan – Enter Lock Serial")
@@ -169,7 +169,7 @@ with tab3:
         st.session_state.lock_box.append(lock_id)
     st.write("Personal Locks in Box:", st.session_state.lock_box)
     st.write("Permit Locks Applied:", st.session_state.permit_locks)
-    st.image(Image.open("/Users/lozhemmings/Downloads/danger_tags.png"), 
+    st.image(Image.open("danger_tags.png"), 
              caption="Danger tags used with locks.", 
              use_container_width=True)
 
